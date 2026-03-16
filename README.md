@@ -36,8 +36,8 @@ strict mode code may not contain 'with' statements
 2. Run in Chrome or Edge (browsers that expose `trustedTypes`)
 3. Apply any Knockout binding (e.g. `data-bind="text: value"`)
 
-The crash does **not** occur in Firefox (no `trustedTypes` global → Knockout
-uses `new Function()` → no strict-mode issue).
+The crash occurs in any browser that exposes the `trustedTypes` global —
+Chrome, Edge, and Firefox (since v128).
 
 ## Versions
 
